@@ -22,6 +22,9 @@ header li, main li {
 header {
     height: 90vh;
     margin-bottom: 20px;
+    background: url(https://images6.alphacoders.com/423/423907.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header a, header span {
@@ -66,39 +69,30 @@ header nav .menu a:hover {
     box-shadow: 0 -2px 0px #78e0f7 inset;
 }
 
-header .banner img {
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    top: 0;
-    z-index: 10;
-}
-
 /* ------------------------------------------- Estilos del main -------------------------------------------*/
 main {
     color: #444;
     font-weight: 300;
 }
 
-main .section {
+main section {
     text-align: center;
     padding-top: 6em;
     padding-bottom: 6em;
 }
 
-main .section:nth-child(even) {
+main section:nth-child(even) {
     background: #F3F1F1;
 }
 
-main .section h2 {
+main section h2 {
     font-size: 62px;
     font-weight: 400;
     margin-bottom: 20px;
 }
 
-main .section p {
+main section p {
     line-height: 1.9em;
-
 }
 
 main .acerca_de .img-cont {
@@ -127,21 +121,21 @@ main .services .service-item i {
     margin-right: 25px;
 }
 
-main .section .peces .pez-item {
+main section .peces .pez-item {
     position: relative;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
-main .section .peces .pez-item:hover .pez-item-info {
+main section .peces .pez-item:hover .pez-item-info {
     opacity: 1;
 }
 
-main .section .peces .pez-item img {
+main section .peces .pez-item img {
     width: 100%;
 }
 
-main .section .peces .pez-item-info {
+main section .peces .pez-item-info {
     opacity: 0;
     position: absolute;
     display: flex;
@@ -155,21 +149,21 @@ main .section .peces .pez-item-info {
     transition: all .4s ease;
 }
 
-main .section .peces .pez-item-info p {
+main section .peces .pez-item-info p {
     color: #fff;
     width: 80%;
 }
 
-main .section .equipo li {
+main section .equipo li {
     margin-bottom: 40px;
     padding: 20px;
 }
 
-main .section .equipo {
+main section .equipo {
     background-image: url(img/banner-bg.jpg);
 }
 
-main .section .equipo img {
+main section .equipo img {
     border-radius: 50%;
     width: 100%;
     margin-bottom: 20px;
