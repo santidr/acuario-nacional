@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+header .logo a, h2, h3, h4 {
+    font-family: 'Poiret One', cursive;
+}
+
+header li, main li {
+    list-style: none;
+}
+
+/* ------------------------------------------- Estilos del header -------------------------------------------*/
+header {
+    height: 90vh;
+    margin-bottom: 20px;
+}
+
+header a, header span {
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s ease;
+}
+
+header .logo-menu {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    background: rgba(0,0,0,.6);
+}
+
+header .logo-menu .burger-icon {
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+    padding: 2px;
+}
+
+header .logo a {
+    font-size: 46px;
+    font-family: 'Poiret One', cursive;
+}
+
+header .logo a span {
+    color: #78e0f7;
+}
+
+header nav .menu a {
+    font-size: 14px;
+    display: inline-block;;
+    padding: 25px 15px;
+    text-transform: uppercase;
+}
+
+header nav .menu a:hover {
+    color: #78e0f7;
+    box-shadow: 0 -2px 0px #78e0f7 inset;
+}
+
+header .banner img {
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+/* ------------------------------------------- Estilos del main -------------------------------------------*/
+main {
+    color: #444;
+    font-weight: 300;
+}
+
+main .section {
+    text-align: center;
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+
+main .section:nth-child(even) {
+    background: #F3F1F1;
+}
+
+main .section h2 {
+    font-size: 62px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+main .section p {
+    line-height: 1.9em;
+
+}
+
+main .acerca_de .img-cont {
+    margin-top: 40px;
+}
+
+main .acerca_de img {
+    width: 100%;
+}
+
+main .services {
+    background: #fff;
+    margin: 0 20px;
+    padding: 40px 0;
+}
+
+main .services .service-item {
+    display: flex;
+    text-align: justify;
+    margin-bottom: 20px;
+    padding: 0 40px;
+}
+
+main .services .service-item i {
+    font-size: 54px;
+    margin-right: 25px;
+}
+
+main .section .peces .pez-item {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+main .section .peces .pez-item:hover .pez-item-info {
+    opacity: 1;
+}
+
+main .section .peces .pez-item img {
+    width: 100%;
+}
+
+main .section .peces .pez-item-info {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all .4s ease;
+}
+
+main .section .peces .pez-item-info p {
+    color: #fff;
+    width: 80%;
+}
+
+main .section .equipo li {
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+main .section .equipo {
+    background-image: url(img/banner-bg.jpg);
+}
+
+main .section .equipo img {
+    border-radius: 50%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+main .galeria .galeria-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+main .galeria img {
+    width: 100%;
+}
+
+main .galeria .row:nth-child(even) .galeria-item:first-child img {
+    height: 100%;
+}
+
+main .galeria .row:nth-child(odd) .galeria-item:last-child img {
+    height: 100%;
+}
+
+footer {
+    background: #0c3540;
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/*--------------------------------------------- Responsive design ---------------------------------------------*/
+@media screen and (max-width: 991px) {
+    header .logo-menu {
+        padding-top: 0;
+    }
+
+    header .logo-menu .burger-icon {
+        display: inline-block;
+    }
+
+    header nav {
+        display: none;
+        background: rgba(0, 0, 0, .9);
+        width: 100%;
+        position: absolute;
+        top: 54px;
+        left: 0;
+    }
+
+    header nav .menu a {
+        display: block;
+        text-align: center;
+    }
+}
