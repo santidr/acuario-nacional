@@ -188,6 +188,10 @@ main .galeria .row:nth-child(odd) .galeria-item:last-child img {
     height: 100%;
 }
 
+main .galeria .galeria-item a {
+    height: 100%;
+}
+
 footer {
     background: #0c3540;
 }
