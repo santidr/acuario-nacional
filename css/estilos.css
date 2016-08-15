@@ -18,6 +18,15 @@ header li, main li {
     list-style: none;
 }
 
+img {
+    box-shadow: 0 1px 3px rgba(0,0,0,.32);
+}
+
+main .contacto input[type=submit],
+footer {
+    background: #0c3540;
+}
+
 /* ------------------------------------------- Estilos del header -------------------------------------------*/
 header {
     height: 90vh;
@@ -38,7 +47,7 @@ header .logo-menu {
     right: 0;
     left: 0;
     z-index: 20;
-    background: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.75);
 }
 
 header .logo-menu .burger-icon {
@@ -57,22 +66,28 @@ header .logo a span {
     color: #78e0f7;
 }
 
+header nav .menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
 header nav .menu a {
     font-size: 14px;
-    display: inline-block;;
     padding: 25px 15px;
     text-transform: uppercase;
 }
 
 header nav .menu a:hover {
     color: #78e0f7;
-    box-shadow: 0 -2px 0px #78e0f7 inset;
+    box-shadow: 0 -3px 0px #78e0f7 inset;
 }
 
 /* ------------------------------------------- Estilos del main -------------------------------------------*/
 main {
     color: #444;
     font-weight: 300;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 main section {
@@ -82,7 +97,18 @@ main section {
 }
 
 main section:nth-child(even) {
-    background: #F3F1F1;
+    background: #ebeff2;
+}
+
+main section.servicios {
+    background: url(https://wallpaperscraft.com/image/fish_yellow_underwater_seaweed_96515_1920x1080.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main section.servicios h2 {
+    color: #f2f2f2;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
 }
 
 main section h2 {
@@ -155,7 +181,7 @@ main section .peces .pez-item-info p {
 }
 
 main section .equipo li {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 20px;
 }
 
@@ -192,8 +218,69 @@ main .galeria .galeria-item a {
     height: 100%;
 }
 
-footer {
+main .contacto h2 {
+    margin-bottom: 80px;
+}
+
+main .contacto form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+main .contacto form label,
+main .contacto form input[type=submit] {
+    text-transform: uppercase;
+}
+
+main .contacto form input[type=submit] {
+    padding: 15px 25px;
     background: #0c3540;
+    border: none;
+    color: #fff;
+    float: right;
+}
+
+main .contacto form input[type=text],
+main .contacto form input[type=email],
+main .contacto form textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+main section:last-child {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: left;
+    position: relative;
+}
+
+main section:last-child h3 {
+    margin-bottom: 20px;
+}
+
+main section:last-child i {
+    font-size: 48px;
+    color: #0c3540;
+}
+
+main section:last-child .direccion {
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+
+main section:last-child .mapa-cont {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 50%;
+}
+
+main section #map {
+    height: 100%;
 }
 
 footer p {
@@ -205,6 +292,7 @@ footer p {
 
 /*--------------------------------------------- Responsive design ---------------------------------------------*/
 @media screen and (max-width: 991px) {
+    /*---------- Algunos estilos del header ----------*/
     header .logo-menu {
         padding-top: 0;
     }
@@ -222,8 +310,27 @@ footer p {
         left: 0;
     }
 
+    header nav .menu {
+        flex-direction: column;
+    }
+
     header nav .menu a {
         display: block;
         text-align: center;
+    }
+
+    /*---------- Algunos estilos del main ----------*/
+    main .services .service-item {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    main .services .service-item i {
+        text-align: center;
+    }
+
+    main section:last-child .mapa-cont {
+        position: static;
+        height: 70vh;
     }
 }
