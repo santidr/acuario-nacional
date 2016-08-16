@@ -10,7 +10,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-header .logo a, h2, h3, h4 {
+header .logo a, h1, h2, h3, h4 {
     font-family: 'Poiret One', cursive;
 }
 
@@ -29,11 +29,12 @@ footer {
 
 /* ------------------------------------------- Estilos del header -------------------------------------------*/
 header {
-    height: 90vh;
+    height: 100vh;
     margin-bottom: 20px;
     background: url(https://images6.alphacoders.com/423/423907.jpg);
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
 }
 
 header a, header span {
@@ -82,6 +83,17 @@ header nav .menu a:hover {
     box-shadow: 0 -3px 0px #78e0f7 inset;
 }
 
+header .presentation {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+}
+
+header .presentation h1 {
+    font-size: 48px;
+    color: #fff;
+}
+
 /* ------------------------------------------- Estilos del main -------------------------------------------*/
 main {
     color: #444;
@@ -96,6 +108,12 @@ main section {
     padding-bottom: 6em;
 }
 
+header h1,
+main .servicios h2 {
+    color: #f2f2f2;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+}
+
 main section:nth-child(even) {
     background: #ebeff2;
 }
@@ -106,19 +124,18 @@ main section.servicios {
     background-attachment: fixed;
 }
 
-main section.servicios h2 {
-    color: #f2f2f2;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
-}
-
 main section h2 {
     font-size: 62px;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 main section p {
     line-height: 1.9em;
+}
+
+main .acerca_de p {
+    margin: 10px 0 20px 0;
 }
 
 main .acerca_de .img-cont {
@@ -180,21 +197,6 @@ main section .peces .pez-item-info p {
     width: 80%;
 }
 
-main section .equipo li {
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-main section .equipo {
-    background-image: url(img/banner-bg.jpg);
-}
-
-main section .equipo img {
-    border-radius: 50%;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
 main .galeria .galeria-item {
     display: flex;
     flex-direction: column;
@@ -216,6 +218,21 @@ main .galeria .row:nth-child(odd) .galeria-item:last-child img {
 
 main .galeria .galeria-item a {
     height: 100%;
+}
+
+main section .equipo li {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+main section .equipo {
+    background-image: url(img/banner-bg.jpg);
+}
+
+main section .equipo img {
+    border-radius: 50%;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 main .contacto h2 {
@@ -320,6 +337,9 @@ footer p {
     }
 
     /*---------- Algunos estilos del main ----------*/
+    main .services {
+        margin: 0;
+    }
     main .services .service-item {
         flex-direction: column;
         margin-bottom: 60px;
