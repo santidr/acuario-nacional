@@ -14,6 +14,10 @@ header .logo a, h1, h2, h3, h4 {
     font-family: 'Poiret One', cursive;
 }
 
+h3 {
+    display: block;
+}
+
 header li, main li {
     list-style: none;
 }
@@ -48,7 +52,7 @@ header .logo-menu {
     right: 0;
     left: 0;
     z-index: 20;
-    background: rgba(0,0,0,.75);
+    background: rgba(12, 18, 33, 0.9);
 }
 
 header .logo-menu .burger-icon {
@@ -59,7 +63,7 @@ header .logo-menu .burger-icon {
 }
 
 header .logo a {
-    font-size: 46px;
+    font-size: 44px;
     font-family: 'Poiret One', cursive;
 }
 
@@ -74,7 +78,7 @@ header nav .menu {
 
 header nav .menu a {
     font-size: 14px;
-    padding: 25px 15px;
+    padding: 22px 20px;
     text-transform: uppercase;
 }
 
@@ -155,7 +159,8 @@ main .services {
 main .services .service-item {
     display: flex;
     text-align: justify;
-    margin-bottom: 20px;
+    flex-direction: column;
+    margin-bottom: 30px;
     padding: 0 40px;
 }
 
@@ -168,6 +173,8 @@ main section .peces .pez-item {
     position: relative;
     margin-bottom: 20px;
     overflow: hidden;
+    height: 300px;
+    color: #fff;
 }
 
 main section .peces .pez-item:hover .pez-item-info {
@@ -176,6 +183,7 @@ main section .peces .pez-item:hover .pez-item-info {
 
 main section .peces .pez-item img {
     width: 100%;
+    height: 100%;
 }
 
 main section .peces .pez-item-info {
@@ -184,17 +192,23 @@ main section .peces .pez-item-info {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     transition: all .4s ease;
 }
 
+main section .peces .pez-item-info h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
 main section .peces .pez-item-info p {
-    color: #fff;
     width: 80%;
+    line-height: 1.6em;
 }
 
 main .galeria .galeria-item {
@@ -225,13 +239,10 @@ main section .equipo li {
     padding: 20px;
 }
 
-main section .equipo {
-    background-image: url(img/banner-bg.jpg);
-}
-
 main section .equipo img {
     border-radius: 50%;
     width: 100%;
+    height: 250px;
     margin-bottom: 20px;
 }
 
@@ -304,7 +315,7 @@ footer p {
     color: #fff;
     font-size: 14px;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 /*--------------------------------------------- Responsive design ---------------------------------------------*/
@@ -312,6 +323,8 @@ footer p {
     /*---------- Algunos estilos del header ----------*/
     header .logo-menu {
         padding-top: 0;
+        height: 60px;
+        line-height: 60px;
     }
 
     header .logo-menu .burger-icon {
@@ -320,15 +333,16 @@ footer p {
 
     header nav {
         display: none;
-        background: rgba(0, 0, 0, .9);
+        background: rgba(12, 18, 33, 0.95);
         width: 100%;
         position: absolute;
-        top: 54px;
+        top: 60px;
         left: 0;
     }
 
     header nav .menu {
         flex-direction: column;
+        line-height: 30px;
     }
 
     header nav .menu a {
@@ -343,6 +357,7 @@ footer p {
     main .services .service-item {
         flex-direction: column;
         margin-bottom: 60px;
+        padding: 0 20px;
     }
 
     main .services .service-item i {
