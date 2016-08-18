@@ -4,6 +4,14 @@ $(document).ready(function() {
         $('nav').slideToggle();
     });
 
+    var widthWindow = $(window).width();
+
+    if (widthWindow < 991) {
+        $('nav a').click(function() {
+            $('nav').css({'display': 'none'});
+        });
+    }
+
     // Scroll suave hacia elementos con ID
     $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

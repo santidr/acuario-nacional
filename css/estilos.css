@@ -79,7 +79,7 @@ header nav .menu {
 
 header nav .menu a {
     font-size: 14px;
-    padding: 22px 20px;
+    padding: 22px 15px;
     text-transform: uppercase;
 }
 
@@ -378,11 +378,12 @@ footer p {
         position: absolute;
         top: 60px;
         left: 0;
+        overflow-y: scroll;
     }
 
     header nav .menu {
         flex-direction: column;
-        line-height: 25px;
+        line-height: 20px;
     }
 
     header nav .menu a {
