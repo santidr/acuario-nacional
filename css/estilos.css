@@ -41,7 +41,8 @@ header {
     display: flex;
 }
 
-header a, header span {
+header a, header span,
+main section article h3 a {
     text-decoration: none;
     color: #fff;
     transition: all .5s ease;
@@ -153,7 +154,7 @@ main .acerca_de img {
 main .services {
     background: #fff;
     margin: 0 20px;
-    padding: 40px 0;
+    padding: 60px;
 }
 
 main .services .service-item {
@@ -232,6 +233,45 @@ main .galeria .row:nth-child(odd) .galeria-item:last-child img {
 
 main .galeria .galeria-item a {
     height: 100%;
+}
+
+main .noticias article {
+    text-align: justify;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+main .noticias article .wrap {
+    padding: 15px;
+    border-radius: 2px;
+    transition: all .3s ease;
+}
+
+main .noticias article .wrap:hover {
+    background: #ebeff2;
+    transform: translateY(-5%);
+    box-shadow: 0 2px 5px 2px rgba(0,0,0,.2);
+}
+
+main .noticias article h3 {
+    margin: 10px 0;
+}
+
+main .noticias article h3 a {
+    text-decoration: none;
+    color: #444;
+}
+
+main .noticias article h3 a:hover {
+    color: #217aa1;
+}
+
+main .noticias article p {
+    line-height: 1.5em;
+}
+
+main .noticias article img {
+    width: 100%;
 }
 
 main section .equipo li {
@@ -333,7 +373,7 @@ footer p {
 
     header nav {
         display: none;
-        background: rgba(12, 18, 33, 0.95);
+        background: rgba(12, 18, 33, 0.97);
         width: 100%;
         position: absolute;
         top: 60px;
@@ -342,30 +382,33 @@ footer p {
 
     header nav .menu {
         flex-direction: column;
-        line-height: 30px;
+        line-height: 25px;
     }
 
     header nav .menu a {
         display: block;
         text-align: center;
+        border-bottom: 1px solid rgba(196, 196, 196, 0.18);
     }
 
     /*---------- Algunos estilos del main ----------*/
     main .services {
         margin: 0;
+        padding: 20px 0;
     }
+
     main .services .service-item {
         flex-direction: column;
         margin-bottom: 60px;
         padding: 0 20px;
     }
 
-    main .services .service-item i {
-        text-align: center;
-    }
-
     main section:last-child .mapa-cont {
         position: static;
         height: 70vh;
+    }
+
+    main section .equipo img {
+        height: 180px;
     }
 }
